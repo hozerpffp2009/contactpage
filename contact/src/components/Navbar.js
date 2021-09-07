@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Nav from 'react-bootstrap/Nav'
 
 class Navbar extends Component {
     state = {
@@ -8,17 +7,28 @@ class Navbar extends Component {
 
     render() {
         return(
-            <Nav className="justify-content-center" activeKey="/home">
+          <nav>
+            <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="/">Home</a>
+    <a href="contact">Contact</a>
+    <a href="portfolio">Portfolio</a>
+  </div>
+</div>
+            {/* <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
+               <Nav.Link href="/">Home</Nav.Link>
+           </Nav.Item>
+             <Nav.Item>
               <Nav.Link href="contact">Contact</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+             <Nav.Item>
               <Nav.Link href="portfolio">Portfolio</Nav.Link>
             </Nav.Item>
-          </Nav>
+           </Nav> */}
+          </nav>
+     
         );
     };
 }
